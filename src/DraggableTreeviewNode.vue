@@ -12,16 +12,17 @@
         :key="index"
         class="v-treeview-node__level"
       />
-      <i
-        v-if="hasChildren"
-        role="button"
-        class="v-icon notranslate v-treeview-node__toggle v-icon--link mdi mdi-menu-down"
+      <button 
+        type="button" 
+        class="v-icon notranslate v-treeview-node__toggle v-icon--link material-icons"
         :class="{
           'v-treeview-node__toggle--open': open,
           'theme--dark': isDark,
           'theme--light': !isDark
         }"
-      />
+      >
+      arrow_drop_down
+      </button>
       <slot name="prepend" v-bind="{ item: value, open }" />
       <div class="v-treeview-node__label">
         <slot name="label" v-bind="{ item: value, open }">
