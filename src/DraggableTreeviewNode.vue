@@ -12,8 +12,8 @@
         :key="index"
         class="v-treeview-node__level"
       />
-      <button 
-        type="button" 
+      <button
+        type="button"
         class="v-icon notranslate v-treeview-node__toggle v-icon--link material-icons"
         :class="{
           'v-treeview-node__toggle--open': open,
@@ -32,7 +32,7 @@
       <slot name="append" v-bind="{ item: value }" />
     </div>
     <div
-      v-if="open"
+      v-show="open"
       class="v-treeview-node__children v-treeview-node__children__draggable"
     >
       <draggable
